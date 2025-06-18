@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Material Sheet</title>
+  <link rel="stylesheet" href="./stylesheet.css" />
+</head>
+<body>
+
+  <div id="mainContent">
+
+  <nav>
+    <h1>Estimate</h1>
+   <div id="head">
+      <div>
+        <h3><u>Malwa Trolley</u></h3>
+        <p>09,Nemwar Road,Udyog nagar ,Palda<br>Indore</p>
+        <p>Contact  - +91 822 4000 822</p>
+        <p> GSTIN : 23CLKPM9473J1ZI</p>
+      </div>
+  
+      <div>
+        <img src="./Malwalogo.jpeg" alt="Image">
+      </div>
+    </div>
+  
+    <div id="main">
+      <label><u>Estimate To</u><br>
+        <input type="text" id="invoiceTo">
+      </label>
+  
+      <label><u>Invoice No.</u><br>
+        <input type="text" id="dataNo">
+      </label>
+  
+      <label><u>Date</u><br>
+        <input type="date" id="date">
+      </label>
+    </div>
+  
+    <div id="btm">
+      <label><u>Consignee GST No.</u><br>
+        <input type="text" id="gstNo">
+      </label>
+  
+      <label><u>Veh.No.</u><br>
+        <input type="text" id="vehNo">
+      </label>
+    </div>
+
+  
+  </nav> 
+  
+
+
+
+
+
+
+
+
+
+  <div id="controls">
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="deleteSelectedRows()">Delete Selected</button>
+    <button onclick="openSelectedInNewPage(),goNext()">Next</button>
+    <button onclick="downloadTableAsImage()">Download as Image</button>
+    <button onclick="downloadTableAsPDF()">Download as PDF</button>
+     <button onclick="logout()">Logout</button>
+       <button onclick="selectAllCheckboxes()">Select All</button> <!-- 👈 New button -->
+
+    <!-- <button onclick="saveData()">Local storage</button> -->
+     <a href="./index.html"> <button>Back</button></a>
+</div>
+
+  <table id="materialTable">
+    <thead>
+      <tr>
+        
+        <th>checkbox</th>
+        <th>Description</th>
+        <th>Rate</th>
+        <th>QTY</th>
+         <th>Total</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+        <!-- opening fitting and Rate --> 
+
+
+
+<tr>
+  <td><input type="checkbox" /></td>
+   <td><select  class="description" >
+    <option value="Cabin Wiring — Opening Fitting">Cabin Wiring — Opening Fitting</option></select></td>
+   <td><input  class="rate" type="number" value="4500"  placeholder=" Enter Rate"  /></td>
+   <td><input  class="qty"  type="number"   value="1"      placeholder=" Enter QTY" /></td>
+   <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+   </tr>
+      
+  
+ 
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Cabin Machanical— Opening Fitting">Cabin Machanical— Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="6500" placeholder="Enter Rate" /></td>
+          <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Cabin Cream Charge">Cabin Cream Charge</option>
+          </select></td>
+          <td><input class="rate" type="number" value="1500" placeholder="Enter Rate" /></td>
+          <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Dashboard — Opening Fitting">Dashboard — Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="7500" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number"   value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Body — Opening Fitting">Body — Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="7500" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number"  value="1"     placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Sub Chassis — Opening Fitting">Sub Chassis — Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="4500" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number"  value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+
+
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Body Cream Charge">Body Cream Charge</option>
+          </select></td>
+          <td><input class="rate" type="number" value="1500" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Jack Assembly — Opening Fitting">Jack Assembly — Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="4500" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Sub Chassis + Jack Cream Charge">Sub Chassis + Jack Cream Charge</option>
+          </select></td>
+          <td><input class="rate" type="number" value="1000" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number"  value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Leaf Spring Opening Fitting">Leaf Spring Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="2000" placeholder="Enter Rate" /></td>
+          <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Axle Opening Fitting">Axle Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="6500" placeholder="Enter Rate" /></td>
+            <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Bogy Leaf Opening Fitting">Bogy Leaf Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="4500" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number"  value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Bogy Hub  Opening Fitting">Bogy Hub  Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="1200" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Tube Opening Fitting">Tube Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="8500" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Tube's Hub Opening Fitting">Tube's Hub Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="700" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Main Chassis Half  Opening Fitting">Main Chassis Half  Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="18000" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Main Chassis Full Opening Fitting">Main Chassis Full Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="24000" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Engine — Opening Fitting">Engine — Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="4500" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Engine Wiring — Opening Fitting">Engine Wiring — Opening Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="3500" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+        <tr>
+          <td><input type="checkbox" /></td>
+          <td><select class="description">
+            <option value="Only Jack Opening / Fitting">Only Jack Opening / Fitting</option>
+          </select></td>
+          <td><input class="rate" type="number" value="1500" placeholder="Enter Rate" /></td>
+                   <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+        </tr>
+        
+
+
+
+
+ <!-- Repair cabin  -->
+
+ 
+
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Danting — 10% Damage">Cabin Danting — 10% Damage</option>
+    </select></td>
+    <td><input class="rate" type="number" value="5500" placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Danting — 20% Damage">Cabin Danting — 20% Damage</option>
+    </select></td>
+    <td><input class="rate" type="number" value="11000"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Danting — 40% Damage">Cabin Danting — 40% Damage</option>
+    </select></td>
+    <td><input class="rate" type="number" value="21000" placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Danting — 50% Damage">Cabin Danting — 50% Damage</option>
+    </select></td>
+    <td><input class="rate" type="number" value="35000"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Danting — 60% Damage">Cabin Danting — 60% Damage</option>
+    </select></td>
+    <td><input class="rate" type="number" value="45000"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Danting — 75% Damage">Cabin Danting — 75% Damage</option>
+    </select></td>
+    <td><input class="rate" type="number" value="65000"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Bumper Danting — 3 Peace">Bumper Danting — 3 Peace</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1800"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Bumper Danting — 2 Peace">Bumper Danting — 2 Peace</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1400"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Bumper Danting — 1 Peace">Bumper Danting — 1 Peace</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1100" placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Gate Setting LHS/RHS">Gate Setting LHS/RHS</option>
+    </select></td>
+    <td><input class="rate" type="number" value="800" placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Gate Repair — 10%">Gate Repair — 10%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1100"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="केबिन गेट रिपेयर 20%">Gate Repair — 20%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1800"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="केबिन गेट रिपेयर 30%">Gate Repair — 30%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="3500"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Gate Repair — 40%">Gate Repair — 40%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="4000"  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+
+
+  <!-- <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="केबिन गेट रिपेयर 75%">केबिन गेट रिपेयर 50%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="" placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number"  placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="केबिन गेट रिपेयर 75%">केबिन गेट रिपेयर 75%</option>
+    </select></td>
+    <td><input class="rate" type="number" value=""  placeholder=" Enter Rate" /></td>
+    <td><input class="qty" type="number"  placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr> -->
+  
+
+
+
+
+
+
+
+
+
+ <!--  chassis repais --> 
+ 
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="One Side Bent Vertical">One Side Bent Vertical</option>
+  </select></td>
+  <td><input class="rate" type="number" value="16000" placeholder=" Enter Rate" /></td>
+  <td><input class="qty" type="number"  value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="Two Side Bent Vertical">Two Side Bent Vertical</option>
+  </select></td>
+  <td><input class="rate" type="number" value="21000"placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number"  value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="One Side Zigzag + Vertical">One Side Zigzag + Vertical</option>
+  </select></td>
+  <td><input class="rate" type="number" value="18000"placeholder=" Enter Rate" /></td>
+  <td><input class="qty" type="number"value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="Two Side Zigzag + Vertical Bent">Two Side Zigzag + Vertical Bent</option>
+  </select></td>
+  <td><input class="rate" type="number" value="27000"placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="One Side Zigzag Bent">One Side Zigzag Bent</option>
+  </select></td>
+  <td><input class="rate" type="number" value="8000" placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="Two Side Zigzag Bent">Two Side Zigzag Bent
+</option>
+  </select></td>
+  <td><input class="rate" type="number" value="14000" placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="Chassis Crack Stitching">Chassis Crack Stitching </option>
+  </select></td>
+  <td><input class="rate" type="number" value="3000"placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="Chassis Damage 40%">Chassis Damage 40%</option>
+  </select></td>
+  <td><input class="rate" type="number" value="45000"placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+<tr>
+  <td><input type="checkbox" /></td>
+  <td><select class="description">
+    <option value="Chassis Damage 60%">Chassis Damage 60%</option>
+  </select></td>
+  <td><input class="rate" type="number" value="55000" placeholder=" Enter Rate"  /></td>
+  <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+</tr>
+
+
+
+
+
+ <!-- body repiar -->
+  
+ <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Kenopi Repair  10%">Kenopi Repair  10%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Kenopi Repair  25%">Kenopi Repair  25%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="3000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Kenopi Repair 40%">Kenopi Repair 40%</option>
+    </select></td>
+    <td><input class="rate" type="number" value="4500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Kenopi Half Change">Kenopi Half Change</option>
+    </select></td>
+    <td><input class="rate" type="number" value="6500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Kenopi Full Change">Kenopi Full Change</option>
+    </select></td>
+    <td><input class="rate" type="number" value="10500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Rafter Repair 25%">Rafter Repair 25% </option>
+    </select></td>
+    <td><input class="rate" type="number" value="2500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Rafter Change Half">Rafter Change Half </option>
+    </select></td>
+    <td><input class="rate" type="number" value="4000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Rafter Change Full">Rafter Change Full</option>
+    </select></td>
+    <td><input class="rate" type="number" value="8000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value=">Body Side Alignment 10%">Body Side Alignment 10% </option>
+    </select></td>
+    <td><input class="rate" type="number" value="3000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Side Alignment 25%">Body Side Alignment 25% </option>
+    </select></td>
+    <td><input class="rate" type="number" value="7000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Side Alignment 40% ">Body Side Alignment 40% 
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="12000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Side Alignment 70% ">Body Side Alignment 70% 
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="20000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Bushing">Body Bushing</option>
+    </select></td>
+    <td><input class="rate" type="number" value="5500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Jack Thiya Bushing">Jack Thiya Bushing</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1800" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Lift New">Body Lift New
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="11000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Lift Repair">Lift Repair</option>
+    </select></td>
+    <td><input class="rate" type="number" value="4500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Base Structure Alignment">Body Base Structure Alignment</option>
+    </select></td>
+    <td><input class="rate" type="number" value="60000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Structure Pipe Repair 2 Ft">Body Structure Pipe Repair 2 Ft
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="3000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Structure Pipe Full Change">Body Structure Pipe Full Change</option>
+    </select></td>
+    <td><input class="rate" type="number" value="14000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+
+
+  
+<!-- body Rapair-2 -->
+
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Pipe change Horigental">Dala Pipe change Horigental</option>
+    </select></td>
+    <td><input class="rate" type="number" value="8000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Pipe Charge Vertical">Dala Pipe Charge Vertical </option>
+    </select></td>
+    <td><input class="rate" type="number" value="6500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Full Dala New in Exchange">Full Dala New in Exchange</option>
+    </select></td>
+    <td><input class="rate" type="number" value="21000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala New without Exchange">Dala New without Exchange </option>
+    </select></td>
+    <td><input class="rate" type="number" value="24000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Handle New">Dala Handle New</option>
+    </select></td>
+    <td><input class="rate" type="number" value="800" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Handle with stand">Dala Handle with stand</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1300" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body main piller change">Body main piller change</option>
+    </select></td>
+    <td><input class="rate" type="number" value="8500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Hockey New">Dala Hockey New</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Hockey HanJis Assembly">Hockey HanJis Assembly</option>
+    </select></td>
+    <td><input class="rate" type="number" value="2400" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Pocklan Box Center">Pocklan Box Center</option>
+    </select></td>
+    <td><input class="rate" type="number" value="2100" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Pocklan Box Set of 3">Pocklan Box Set of 3</option>
+    </select></td>
+    <td><input class="rate" type="number" value="3500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Auto lock Repair on Side">Auto lock Repair on Side</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1300" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body upper member main 1 feet">Body upper member main 1 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+
+
+
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value=">Body upper member main 2 feet">Body upper member main 2 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="2500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value=">Body upper member main 5 feet">Body upper member main 5 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="4000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body upper member main 8 feet">Body upper member main 8 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="7000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body upper member main 12 feet">Body upper member main 12 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="9200" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body upper member main 15 feet">Body upper member main 15 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="14000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body upper member main 20 feet">Body upper member main 20 feet</option>
+    </select></td>
+    <td><input class="rate" type="number" value="18000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Side New">Body Side New </option>
+    </select></td>
+    <td><input class="rate" type="number" value="80000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Structure + Floor New Channel Dala">Body Structure + Floor New Channel Dala</option>
+    </select></td>
+    <td><input class="rate" type="number" value="110000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Frame main member Change">Body Frame main member Change</option>
+    </select></td>
+    <td><input class="rate" type="number" value="8500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Piller change Half">Dala Piller change Half
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="4500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Dala Piller Change Full">Dala Piller Change Full</option>
+    </select></td>
+    <td><input class="rate" type="number" value="8000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+
+  
+
+
+            
+<!-- color -->
+
+ 
+
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Full Color Pu finish">Cabin Full Color Pu finish</option>
+    </select></td>
+    <td><input class="rate" type="number" value="15000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin Full Color Aspa finish">Cabin Full Color Aspa finish</option>
+    </select></td>
+    <td><input class="rate" type="number" value="9000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Cabin 60% Tuch up-Pu">Cabin 60% Tuch up-Pu</option>
+    </select></td>
+    <td><input class="rate" type="number" value="8000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Aspa">Aspa</option>
+    </select></td>
+    <td><input class="rate" type="number" value="5500" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="40% Toch UP-Pu">40% Toch UP-Pu</option>
+    </select></td>
+    <td><input class="rate" type="number" value="6000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="40%Touch-up-Asp">40%Touch-up-Asp</option>
+    </select></td>
+    <td><input class="rate" type="number" value="4000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="10% -20% Touch-up-pu">10% -20% Touch-up-pu</option>
+    </select></td>
+    <td><input class="rate" type="number" value="3000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="10-20% Tuoch-UP Aspa">10-20% Tuoch-UP Aspa</option>
+    </select></td>
+    <td><input class="rate" type="number" value="2000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Rubbing Polish Clear-Pu-10">Rubbing Polish Clear-Pu-10</option>
+    </select></td>
+    <td><input class="rate" type="number" value="5500" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body Full Colore">Body Full Colore</option>
+    </select></td>
+    <td><input class="rate" type="number" value="21000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body 50% colore">Body 50% colore</option>
+    </select></td>
+    <td><input class="rate" type="number" value="12000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body 40% Colore">Body 40% Colore</option>
+    </select></td>
+    <td><input class="rate" type="number" value="11000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body 20% colore">Body 20% colore
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="6000" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Body 10% Touch upe">Body 10% Touch upe</option>
+    </select></td>
+    <td><input class="rate" type="number" value="2500" placeholder="Enter Rate" /></td>
+             <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+
+
+
+<!-- sub chassis Repair -->
+
+ 
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Sub chassis Lift New">Sub chassis Lift New</option>
+    </select></td>
+    <td><input class="rate" type="number" value="11000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Sub chassis Genral welding">Sub chassis Genral welding
+</option>
+    </select></td>
+    <td><input class="rate" type="number" value="3000" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"    placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Sub chassis Nut Bolt New">Sub chassis Nut Bolt New</option>
+    </select></td>
+    <td><input class="rate" type="number" value="2800" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Sub Chassis Lift Repair">Sub Chassis Lift Repair</option>
+    </select></td>
+    <td><input class="rate" type="number" value="1500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+  
+  <tr>
+    <td><input type="checkbox" /></td>
+    <td><select class="description">
+      <option value="Sub Chassis Jack thiya New">Sub Chassis Jack thiya New</option>
+    </select></td>
+    <td><input class="rate" type="number" value="6500" placeholder=" Enter QTY" /></td>
+    <td><input class="qty" type="number" value="1"   placeholder="Enter QTY" /></td>
+          <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+  </tr>
+
+
+
+      </tbody>
+         <footer>
+<td colspan="4" id="bottomname">Grand Total</td>
+    <td><input type="number" id="grandTotal" readonly /></td>
+    </footer>
+  </table>
+
+</div>
+
+
+  
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
+<script src="script.js"></script>
+<script>
+
+ document.addEventListener('contextmenu',function(e){e.preventDefault();});
+document.addEventListener('keydown',function(e){
+if(e.keyCode===123){e.preventDefault();}
+if(e.ctrlKey&&e.shiftKey&&e.keyCode===73){e.preventDefault();}
+if(e.ctrlKey&&e.keyCode===85){e.preventDefault();}
+});
+    checkLogin();
+
+    checkLogin();
+</script>
+</body>
+</html>
+ 
+
+
+
+
+
+

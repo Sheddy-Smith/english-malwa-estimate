@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Material Sheet</title>
+  <link rel="stylesheet" href="./stylesheet.css" />
+</head>
+<body>
+
+  <div id="mainContent">
+
+   <nav>
+    <h1>Estimate</h1>
+   <div id="head">
+      <div>
+        <h3><u>Malwa Trolley</u></h3>
+        <p>09,Nemwar Road,Udyog nagar ,Palda<br>Indore</p>
+        <p>Contact  - +91 822 4000 822</p>
+        <p> GSTIN : 23CLKPM9473J1ZI</p>
+      </div>
+  
+      <div>
+        <img src="./Malwalogo.jpeg" alt="Image">
+      </div>
+    </div>
+  
+    <div id="main">
+      <label><u>Estimate To</u><br>
+        <input type="text" id="invoiceTo">
+      </label>
+  
+      <label><u>Invoice No.</u><br>
+        <input type="text" id="dataNo">
+      </label>
+  
+      <label><u>Date</u><br>
+        <input type="date" id="date">
+      </label>
+    </div>
+  
+    <div id="btm">
+      <label><u>Consignee GST No.</u><br>
+        <input type="text" id="gstNo">
+      </label>
+  
+      <label><u>Veh.No.</u><br>
+        <input type="text" id="vehNo">
+      </label>
+    </div>
+
+  
+  </nav> 
+  
+
+
+
+
+
+
+
+
+
+  <div id="controls">
+    <button onclick="addRow()">Add Row</button>
+    <button onclick="deleteSelectedRows()">Delete Selected</button>
+    <button onclick="openSelectedInNewPage(),goNext()">Next</button>
+    <button onclick="downloadTableAsImage()">Download as Image</button>
+    <button onclick="downloadTableAsPDF()">Download as PDF</button>
+    <button onclick="logout()">Logout</button>
+      <button onclick="selectAllCheckboxes()">Select All</button> <!-- 👈 New button -->
+
+    <!-- <button onclick="saveData()">Local storage</button> -->
+     <a href="./index.html"> <button>Back</button></a>
+</div>
+
+  <table id="materialTable">
+    <thead>
+      <tr>
+        
+        <th>checkbox</th>
+        <th>Description</th>
+        <th>Rate</th>
+        <th>QTY</th>
+        <th>Total</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- New -->
+   
+
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Body New">Body New </option>
+                  </select>
+                </td>
+                <td><input class="rate" type="text" value="110kg" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"     placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Sub Chassis New in Exchange.">Sub Chassis New in Exchange.
+</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="65000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"    value="1"     placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Dala New in Exchange">Dala New in Exchange</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="21000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Dala New without Exchange">Dala New without Exchange</option>
+                
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="24000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+
+
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                     <option value="Sub Chassis without Exchange">Sub Chassis without Exchange</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="75000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"   value="1"      placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+
+
+
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Height Extention Package 90 Simple Fix">Height Extention Package 90"Simple Fix</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="55000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Height Extention Package 90"Simple Folding.">Height Extention Package 90"Simple Folding</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="61000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Height Extention 90 to 100t">Height Extention 90 to 100t</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="68000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Only Height 90 fit">Only Height 90 fit</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="40000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Only Height 90 folding">Only Height 90" folding</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="45000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="only Assecindass Package">only Assecindass Package</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="18000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="6 Single Pipe Both Side">6" Single Pipe Both Side</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="11000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Back Dala Extention ">Back Dala Extention </option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="11000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Front Kenopi Extention only">Front Kenopi Extention only</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="5500" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Back Dala Extention  with Pillar">Back Dala Extention  with Pillar</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="16000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <select class="description">
+                    <option value="Front Keno Pi Extention with Piller">Front Keno Pi Extention with Piller</option>
+                  </select>
+                </td>
+                <td><input class="rate" type="number" value="7000" placeholder="Enter Rate" /></td>
+             <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+              </tr>
+              
+ 
+       
+        
+        
+
+ <!-- Ganeral cabin Parts -->
+
+
+    <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Front main glass wind sheild">Front main glass wind sheild</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="6800" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Side glass of gate ">Side glass of gate </option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="480" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door glass">Door glass</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1400" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="window glass">window glass</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1100" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Roof Top glass">Roof Top glass</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1800" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"   value="1"      placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door Top glass of gate">Door Top glass of gate</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1300" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"   value="1"      placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Front glass Rubber Strip.">Front glass Rubber Strip.</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="2150" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Side glass stand.">Side glass stand.</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1100" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"   value="1"      placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="window glass Rubber">window glass Rubber</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="880" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door glass machine Set Bs4">Door glass machine Set Bs4</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1400" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door Rc lock BS4 ">Door Rc lock BS4 </option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="850" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="RC lock Full Set BS4">RC lock Full Set BS4</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1100" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door Handle B54">Door Handle B54</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1200" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"   value="1"      placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+
+
+
+
+
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door lock Bs4">Door lock Bs4</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1400" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"         placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door Trim Pad BS3">Door Trim Pad BS3</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="700" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="Door glass machine BS6">Door glass machine BS6</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="2100" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="DOOR RC lock Set BS6">DOOR RC lock Set BS6</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="1400" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr> <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="DOOR RC lock Set BS6">DOOR RC lock Set BS6
+</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="2100" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr> 
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+
+        <td>
+          <select class="description">
+            <option value="DOOR Hande BS6">DOOR Hande BS6
+
+</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="2400" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+      
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="DOOR LOCk Set BS6
+
+">DOOR LOCk Set BS6
+</option>
+          </select>
+        </td>
+           <td><input class="rate" type="number" value="2250" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+
+
+
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="DOOR TRIM Pad BS4
+">DOOR TRIM Pad BS4
+</option>
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="3800" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+
+
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value="DOOR TRIM Pad B56
+">DOOR TRIM Pad B56
+</option>
+
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="5500" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number" value="1"        placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+
+
+
+
+
+
+
+
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value=" Full gate BS4/BS3 cow/only
+ "> Full gate BS4/BS3 cow/only
+ </option>
+
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="14000" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+
+
+
+  <tr>
+        <td><input type="checkbox" /></td>
+        <td>
+          <select class="description">
+            <option value=" Full gate BS6 cow/only"> Full gate BS6 cow/only</option>
+
+          </select>
+        </td>
+        <td><input class="rate" type="number" value="21000" placeholder="Enter Rate" /></td>
+           <td><input  class="qty"  type="number"  value="1"       placeholder=" Enter QTY" /></td>
+             <td><input  class="total"  type="number"   placeholder=" Total Amount"  readonly /></td>
+      </tr>
+
+
+
+
+
+      </tbody>
+               <footer>
+<td colspan="4" id="bottomname">Grand Total</td>
+    <td><input type="number" id="grandTotal" readonly /></td>
+    </footer>
+  </table>
+
+</div>
+
+
+  
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+
+<script src="script.js"></script>
+
+<script>
+
+document.addEventListener('contextmenu',function(e){e.preventDefault();});
+document.addEventListener('keydown',function(e){
+if(e.keyCode===123){e.preventDefault();}
+if(e.ctrlKey&&e.shiftKey&&e.keyCode===73){e.preventDefault();}
+if(e.ctrlKey&&e.keyCode===85){e.preventDefault();}
+});
+
+
+    checkLogin();
+</script>
+
+</body>
+</html>
+ 
+
+
+
+
+
+
